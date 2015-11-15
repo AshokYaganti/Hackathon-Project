@@ -1,0 +1,5 @@
+c:\users\ashok\onedrive\documents\visual studio 2010\Projects\ImageRepositoryAPI\ImageRepositoryAPI\bin\ImageRepositoryAPI.dll
+c:\users\ashok\onedrive\documents\visual studio 2010\Projects\ImageRepositoryAPI\ImageRepositoryAPI\bin\ImageRepositoryAPI.pdb
+c:\users\ashok\onedrive\documents\visual studio 2010\Projects\ImageRepositoryAPI\ImageRepositoryAPI\obj\Debug\ImageRepositoryAPI.dll
+c:\users\ashok\onedrive\documents\visual studio 2010\Projects\ImageRepositoryAPI\ImageRepositoryAPI\obj\Debug\ImageRepositoryAPI.pdb
+C:\Users\ashok\onedrive\documents\visual studio 2010\Projects\ImageRepositoryAPI\ImageRepositoryAPI\obj\Debug\ImageRepositoryAPI.csprojResolveAssemblyReference.cache

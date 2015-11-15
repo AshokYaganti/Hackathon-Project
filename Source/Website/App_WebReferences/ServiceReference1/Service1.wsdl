@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53444/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53444/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53444/Service1.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:53444/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:53444/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ImageRepositoryAPI" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InserRegisterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserRegisterDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InserRegisterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserRegisterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetForgotDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForgotDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetForgotDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetForgotDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertImageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertImageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserTagNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTagNames" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserTagNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTagNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategoryImageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryImageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategoryImageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryImageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTagNameImageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagNameImageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTagNameImageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagNameImageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteImageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteImageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ArchiveImageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveImageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ArchiveImageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveImageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDetails" message="tns:IService1_GetDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDetailsResponse" message="tns:IService1_GetDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmailID" message="tns:IService1_GetEmailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmailIDResponse" message="tns:IService1_GetEmailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserRegisterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InserRegisterDetails" message="tns:IService1_InserRegisterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserRegisterDetailsResponse" message="tns:IService1_InserRegisterDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePassword" message="tns:IService1_UpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePasswordResponse" message="tns:IService1_UpdatePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForgotDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetForgotDetails" message="tns:IService1_GetForgotDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetForgotDetailsResponse" message="tns:IService1_GetForgotDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCategory" message="tns:IService1_GetCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCategoryResponse" message="tns:IService1_GetCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertImageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertImageDetails" message="tns:IService1_InsertImageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertImageDetailsResponse" message="tns:IService1_InsertImageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCategory" message="tns:IService1_UpdateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCategoryResponse" message="tns:IService1_UpdateCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserCategory" message="tns:IService1_GetUserCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserCategoryResponse" message="tns:IService1_GetUserCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTagNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserTagNames" message="tns:IService1_GetUserTagNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserTagNamesResponse" message="tns:IService1_GetUserTagNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryImageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCategoryImageDetails" message="tns:IService1_GetCategoryImageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCategoryImageDetailsResponse" message="tns:IService1_GetCategoryImageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTagNameImageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTagNameImageDetails" message="tns:IService1_GetTagNameImageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTagNameImageDetailsResponse" message="tns:IService1_GetTagNameImageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteImageDetails" message="tns:IService1_DeleteImageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteImageDetailsResponse" message="tns:IService1_DeleteImageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveImageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ArchiveImageDetails" message="tns:IService1_ArchiveImageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ArchiveImageDetailsResponse" message="tns:IService1_ArchiveImageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserRegisterDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/InserRegisterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForgotDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetForgotDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertImageDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertImageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTagNames">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserTagNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryImageDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCategoryImageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagNameImageDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTagNameImageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImageDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteImageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveImageDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/ArchiveImageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:53444/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

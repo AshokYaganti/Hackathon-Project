@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Image Repository</title> 
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--
+Template 2033 Business
+http://www.tooplate.com/view/2033-business
+-->
+<link href="tooplate_style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .style1
+        {
+            color: #CC6600;
+            font-size: xx-large;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .style2
+        {
+            font-family: "Times New Roman", Times, serif;
+            color: #0066FF;
+        }
+        .style3
+        {
+            font-family: "Times New Roman", Times, serif;
+        }
+        .style4
+        {
+            width: 290px;
+            height: 283px;
+        }
+    </style>
+
+</head>
+<body> 
+
+<div id="tooplate_header_wrapper">
+
+    <div id="tooplate_header">
+    
+        <div id="site_title">
+      
+        
+        	<%--<h1><a href="#"><img src="images/tooplate_logo.png" alt="business template" /><span>Free HTML Template</span></a></h1>--%>
+        
+            <span class="style1"><strong>IMAGE REPOSITORY<br />
+            </strong></span>
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="style2">&nbsp; .... A Place for Efficient Storage and Retrival Of Images </span></div> <!-- end of site_title -->
+        
+        <div id="header_phone_no">
+
+			<%--Toll Free : <span class="style4"><strong>05 713 091 416 </strong></span>--%>
+        
+        </div>
+        
+        <div class="cleaner_h10"></div>
+        
+        <div id="tooplate_menu">
+        	
+            <div id="home_menu"><a href="#"></a></div>
+                
+            <ul>
+                <li class="style3"><a href="home.aspx" class="current">Home</a></li>
+                <li class="style3"><a href="aboutus.aspx">About Us</a></li>
+                <li class="style3"><a href="services.aspx">Services</a></li>
+              
+                <li class="style3"><a href="contact.aspx">Contact Us</a></li>
+                <li class="style3"><a href="LoginPage.aspx">Login/Register</a></li>
+            </ul>    	
+        
+        </div> <!-- end of tooplate_menu -->
+        
+    </div>	  
+</div> <!-- end of header_wrapper -->
+
+
+
+<div id="tooplate_main">
+    
+    <div id="tooplate_content">
+    
+        
+         <asp:ContentPlaceHolder id="Middle" runat="server">
+        
+        </asp:ContentPlaceHolder>           
+                  
+        
+    </div>
+    
+     <div id="tooplate_sidebar">
+        
+            <%--<h2 class="style5">Our Services</h2>
+            
+            <ul class="tooplate_list">
+            <li><a href="trading.aspx">What Is Trading?</a></li>
+            <li><a href="placeorder.aspx">How to Place order?</a></li>
+            <li><a href="tradehistory.aspx">Trade History</a></li>
+            <li><a href="billing.aspx">Billing Details</a></li>
+            <li><a href="location.aspx">Address & Timings</a></li>
+            <li><a href="Album.aspx">Gallery</a></li>
+             <li><a href="faq.aspx">FAQ?</a></li>
+            
+            </ul>
+           
+            
+            </br>--%>
+            
+           
+        
+        
+        
+            <img alt="" class="style4" src="images/pic.png" /></div>
+        
+</div>
+
+    <div class="cleaner"></div>  
+
+<div id="tooplate_footer_wrapper">
+
+     <div id="tooplate_footer">
+    
+      Copyright @ 2048 &nbsp; &nbsp;&nbsp<a href="http://www.imagerepository.somee.com">imagerepository.somee.com</a>
+    
+    </div> <!-- end of tooplate_footer -->
+
+</div> 
+    
+</body>
+</html>
