@@ -1,0 +1,249 @@
+
+create table RegisterDetails
+(EmailID varchar(50),
+Password varchar(50),
+firsttime varchar(10)) 
+
+...........................................................................................................................1
+create procedure sp_RegisterDetails
+(@EmailID varchar(50),
+@Password varchar(50),
+@firsttime varchar(10))
+as
+begin
+insert into RegisterDetails values(@EmailID,@Password,@firsttime)
+end
+
+...........................................................................................................................2
+
+create procedure sp_GetEmailID
+as
+begin
+select EmailID from RegisterDetails
+end
+
+..........................................................................................................................3
+
+create procedure sp_GetDetails
+(@EmailID varchar(50))
+as
+begin
+select EmailID,Password,firsttime from RegisterDetails where EmailID=@EmailID
+end
+
+...........................................................................................................................4
+
+
+create procedure sp_UpdatePassword
+(@EmailID varchar(50),
+@NewPassword varchar(50),
+@firsttime varchar(10))
+as
+begin
+update RegisterDetails set Password=@NewPassword,firsttime=@firsttime where EmailID=@EmailID
+end
+
+...........................................................................................................................5
+
+create procedure sp_GetForgotDetails
+(@EmailID varchar(50))
+as
+begin
+select EmailID, Password from RegisterDetails where EmailID=@EmailID
+end
+
+...........................................................................................................................6
+
+
+create table Category
+(categoryname varchar(50))
+
+...........................................................................................................................7
+
+select * from Category
+
+insert into Category values('School')
+insert into Category values('Company')
+insert into Category values('cellphones')
+insert into Category values('Clothes')
+insert into Category values('Shoes')
+insert into Category values('Birthday')
+insert into Category values('Marrige')
+insert into Category values('Tourism')
+insert into Category values('Atmosphere')
+insert into Category values('Vehicle')
+insert into Category values('House')
+insert into Category values('Electronics')
+insert into Category values('Jewelry')
+insert into Category values('Books')
+insert into Category values('Sports')
+insert into Category values('Furniture')
+insert into Category values('Fitness')
+
+......................................................................................................................................8
+
+create procedure sp_GetCategory
+as
+begin
+select categoryname from Category order by categoryname
+end
+
+......................................................................................................................................9
+
+create table ImageDetails
+(imageid int primary key identity(5000,1), 
+EmailID varchar(50),
+categoryname varchar(50),
+tagname varchar(50),
+photo image,
+date datetime)
+
+....................................................................................................................................10
+
+create procedure sp_InsertImageDetails
+(@EmailID varchar(50),
+@categoryname varchar(50),
+@tagname varchar(50),
+@photo image,
+@date datetime,
+@imageid int output)
+as
+begin
+insert into ImageDetails values(@EmailID,@categoryname,@tagname,@photo,@date)
+SET @imageid=SCOPE_IDENTITY()
+RETURN @imageid
+end
+
+...................................................................................................................................11
+
+
+
+create procedure sp_UpdateCategory
+(@categoryname varchar(50))
+as
+begin
+insert into Category values(@categoryname)
+end
+
+....................................................................................................................................12
+
+
+create procedure sp_GetUserCategory
+(@EmailID varchar(50))
+as
+begin
+select DISTINCT categoryname from ImageDetails where EmailID=@EmailID order by categoryname 
+end
+
+.......................................................................................................................................13
+create procedure sp_GetUserTagNames
+(@EmailID varchar(50))
+as
+begin
+select DISTINCT tagname from ImageDetails where EmailID=@EmailID order by tagname
+end
+......................................................................................................................................14
+
+create procedure sp_GetCategoryImageDetails
+(@EmailID varchar(50),
+@categoryname varchar(50))
+as
+begin
+select EmailID,imageid, categoryname,tagname,date from ImageDetails where EmailID=@EmailID and categoryname=@categoryname
+end
+
+.........................................................................................................................................15
+
+create procedure sp_GetTagNameImageDetails
+(@EmailID varchar(50),
+@tagname varchar(50))
+as
+begin
+select EmailID,imageid, categoryname,tagname,photo, date from ImageDetails where EmailID=@EmailID and tagname=@tagname
+end
+
+........................................................................................................................................16
+
+alter procedure sp_DeleteImageDetails
+(@imageid int)
+as 
+begin
+delete ImageDetails where imageid=@imageid
+end
+
+........................................................................................................................................17
+
+alter procedure sp_ImageStatistics
+(@EmailID varchar(50))
+as
+begin
+select categoryname,COUNT(*) as count from ImageDetails where EmailID=@EmailID group by categoryname
+end
+
+.......................................................................................................................................18
+
+alter procedure sp_GetImageDetails
+(@EmailID varchar(50),
+@fromdate datetime,
+@todate datetime)
+as
+begin
+select * from ImageDetails where EmailID=@EmailID and CONVERT(date, date)>=@fromdate and CONVERT(date, date)<=@todate
+end
+
+......................................................................................................................................19
+
+alter procedure sp_ArchiveImageDetails
+(@EmailID varchar(50),
+@fromdate datetime,
+@todate datetime)
+as
+begin
+delete ImageDetails where EmailID=@EmailID and CONVERT(date, date)>=@fromdate and CONVERT(date, date)<=@todate
+end
+
+........................................................................................................................................20
+
+create table ArchiveImageDetails
+(imageid varchar(50), 
+EmailID varchar(50),
+categoryname varchar(50),
+tagname varchar(50),
+photo image,
+date varchar(50))
+
+......................................................................................................................................21
+
+alter procedure sp_InsertArchiveDetails
+(@imageid varchar(50),
+@EmailID varchar(50),
+@categoryname varchar(50),
+@tagname varchar(50),
+@photo image,
+@date datetime)
+as
+begin
+insert into ArchiveImageDetails values(@imageid,@EmailID,@categoryname,@tagname,@photo,@date)
+end
+
+......................................................................................................................................22
+
+
+create procedure sp_GetArchiveImageDetails
+(@EmailID varchar(50))
+as
+begin
+select imageid,categoryname,tagname,photo,date from ArchiveImageDetails where EmailID=@EmailID
+end
+
+.....................................................................................................................................23
+
+
+create procedure sp_GetBarchartDetails
+(@EmailID varchar(50))
+as
+begin
+select CONVERT(date, date) as date, COUNT(*) as count from ImageDetails where EmailID=@EmailID group by CONVERT(date, date)
+end
+
+.....................................................................................................................................24
